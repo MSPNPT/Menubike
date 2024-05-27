@@ -7,19 +7,43 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         nav {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             padding: 10px;
             border-radius: 8px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
         }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background-color: rgba(87, 87, 87, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#bicicletas">Bicicletas</a>
+        <a href="#accesorios">Accesorios</a>
+        <a href="#componentes">Componentes</a>
+        <a href="#promociones">Promociones</a>
+    </nav>
+</body>
+</html>
+
         nav a {
             color: white;
             text-decoration: none;
