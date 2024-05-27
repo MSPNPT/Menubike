@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: url('paisaje.jpg') no-repeat center center fixed;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             position: absolute;
-            top: 20px; /* Ajustar según sea necesario */
+            top: 20px;
         }
         nav {
             background-color: rgba(51, 51, 51, 0.8);
@@ -31,24 +31,73 @@
             align-items: center;
         }
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             padding: 14px 20px;
             margin: 0 10px;
             border-radius: 4px;
+            background-color: white;
+            position: relative;
         }
         nav a:hover {
-            background-color: rgba(87, 87, 87, 0.8);
+            background-color: blue;
+            color: white;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%; /* Position it below the button */
+        }
+        nav .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        nav .dropdown-content a:hover {
+            background-color: blue;
+            color: white;
+        }
+        nav a:hover .dropdown-content {
+            display: block;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#bicicletas">Bicicletas</a>
-            <a href="#accesorios">Accesorios</a>
-            <a href="#componentes">Componentes</a>
-            <a href="#promociones">Promociones</a>
+            <div class="dropdown">
+                <a href="#bicicletas">Bicicletas</a>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#accesorios">Accesorios</a>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#componentes">Componentes</a>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#promociones">Promociones</a>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                </div>
+            </div>
         </nav>
     </header>
 </body>
