@@ -10,15 +10,23 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: url('paisaje.jpg') no-repeat center center fixed;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 20px; /* Ajustar según sea necesario */
+            flex-direction: column;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px 0;
         }
         header {
-            width: 80%; /* Ajustar según sea necesario */
+            width: 80%;
             display: flex;
             justify-content: center;
             position: relative;
@@ -70,45 +78,47 @@
             display: block;
         }
         .side-image {
-            width: 10%; /* Ajustar según sea necesario */
+            width: 10%;
             height: auto;
         }
     </style>
 </head>
 <body>
-    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
-    <header>
-        <nav>
-            <div class="dropdown">
-                <a href="#bicicletas">Bicicletas</a>
-                <div class="dropdown-content">
-                    <a href="#">Opción 1</a>
-                    <a href="#">Opción 2</a>
+    <div class="container">
+        <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
+        <header>
+            <nav>
+                <div class="dropdown">
+                    <a href="#bicicletas">Bicicletas</a>
+                    <div class="dropdown-content">
+                        <a href="#">Opción 1</a>
+                        <a href="#">Opción 2</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="#accesorios">Accesorios</a>
-                <div class="dropdown-content">
-                    <a href="#">Opción 1</a>
-                    <a href="#">Opción 2</a>
+                <div class="dropdown">
+                    <a href="#accesorios">Accesorios</a>
+                    <div class="dropdown-content">
+                        <a href="#">Opción 1</a>
+                        <a href="#">Opción 2</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="#componentes">Componentes</a>
-                <div class="dropdown-content">
-                    <a href="#">Opción 1</a>
-                    <a href="#">Opción 2</a>
+                <div class="dropdown">
+                    <a href="#componentes">Componentes</a>
+                    <div class="dropdown-content">
+                        <a href="#">Opción 1</a>
+                        <a href="#">Opción 2</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="#promociones">Promociones</a>
-                <div class="dropdown-content">
-                    <a href="#">Opción 1</a>
-                    <a href="#">Opción 2</a>
+                <div class="dropdown">
+                    <a href="#promociones">Promociones</a>
+                    <div class="dropdown-content">
+                        <a href="#">Opción 1</a>
+                        <a href="#">Opción 2</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image">
+            </nav>
+        </header>
+        <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image">
+    </div>
 </body>
 </html>
