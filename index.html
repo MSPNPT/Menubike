@@ -9,8 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background: url('paisaje.jpg') no-repeat center center fixed;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -21,6 +20,7 @@
             width: 80%;
             display: flex;
             justify-content: center;
+            align-items: center;
             position: relative;
         }
         nav {
@@ -29,21 +29,21 @@
             border-radius: 8px;
             display: flex;
             justify-content: center;
-            align-items: center;
             width: 100%;
-            margin-top: 20px; /* Margen superior */
-            position: relative;
+            position: absolute;
+            top: 0;
         }
         nav .dropdown {
             position: relative;
+            margin: 0 10px;
         }
         nav a {
             color: black;
             text-decoration: none;
             padding: 14px 20px;
-            margin: 0 10px;
             border-radius: 4px;
             background-color: white;
+            position: relative;
         }
         nav a:hover {
             background-color: blue;
@@ -56,7 +56,7 @@
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            top: calc(100% + 10px); /* Coloca el desplegable debajo del enlace padre */
+            top: calc(100% + 10px); /* Posiciona el desplegable debajo del enlace principal */
             left: 50%; /* Centra horizontalmente */
             transform: translateX(-50%); /* Centra horizontalmente */
         }
@@ -76,45 +76,50 @@
         .side-image {
             width: 10%;
             height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .side-image.right {
+            left: auto;
+            right: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
-        <header>
-            <nav>
-                <div class="dropdown">
-                    <a href="#bicicletas">Bicicletas</a>
-                    <div class="dropdown-content">
-                        <a href="enlace1-bicicletas.html">Opción 1</a>
-                        <a href="enlace2-bicicletas.html">Opción 2</a>
-                    </div>
+    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
+    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
+    <header>
+        <nav>
+            <div class="dropdown">
+                <a href="#bicicletas">Bicicletas</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-bicicletas.html">Opción 1</a>
+                    <a href="enlace2-bicicletas.html">Opción 2</a>
                 </div>
-                <div class="dropdown">
-                    <a href="#accesorios">Accesorios</a>
-                    <div class="dropdown-content">
-                        <a href="enlace1-accesorios.html">Opción 1</a>
-                        <a href="enlace2-accesorios.html">Opción 2</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <a href="#accesorios">Accesorios</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-accesorios.html">Opción 1</a>
+                    <a href="enlace2-accesorios.html">Opción 2</a>
                 </div>
-                <div class="dropdown">
-                    <a href="#componentes">Componentes</a>
-                    <div class="dropdown-content">
-                        <a href="enlace1-componentes.html">Opción 1</a>
-                        <a href="enlace2-componentes.html">Opción 2</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <a href="#componentes">Componentes</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-componentes.html">Opción 1</a>
+                    <a href="enlace2-componentes.html">Opción 2</a>
                 </div>
-                <div class="dropdown">
-                    <a href="#promociones">Promociones</a>
-                    <div class="dropdown-content">
-                        <a href="enlace1-promociones.html">Opción 1</a>
-                        <a href="enlace2-promociones.html">Opción 2</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <a href="#promociones">Promociones</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-promociones.html">Opción 1</a>
+                    <a href="enlace2-promociones.html">Opción 2</a>
                 </div>
-            </nav>
-        </header>
-        <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image">
-    </div>
+            </div>
+        </nav>
+    </header>
 </body>
 </html>
