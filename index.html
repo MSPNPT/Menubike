@@ -9,12 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('paisaje.jpg') no-repeat center center fixed;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+            height: 100vh;
         }
         header {
             width: 80%;
@@ -28,7 +29,7 @@
             padding: 10px;
             border-radius: 8px;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centra horizontalmente */
             width: 100%;
             position: absolute;
             top: 0;
@@ -57,8 +58,6 @@
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
             top: calc(100% + 10px); /* Posiciona el desplegable debajo del enlace principal */
-            left: 50%; /* Centra horizontalmente */
-            transform: translateX(-50%); /* Centra horizontalmente */
         }
         nav .dropdown-content a {
             color: black;
@@ -87,7 +86,7 @@
     </style>
 </head>
 <body>
-    <img src="logo1.jpg" alt="Imagen Izquierda" class="side-image">
+    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
     <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
     <header>
         <nav>
