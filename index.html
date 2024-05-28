@@ -32,6 +32,7 @@
             align-items: center;
             width: 100%;
             margin-top: 20px; /* Margen superior */
+            position: relative;
         }
         nav .dropdown {
             position: relative;
@@ -55,7 +56,9 @@
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            top: 100%;
+            top: calc(100% + 10px); /* Coloca el desplegable debajo del enlace padre */
+            left: 50%; /* Centra horizontalmente */
+            transform: translateX(-50%); /* Centra horizontalmente */
         }
         nav .dropdown-content a {
             color: black;
