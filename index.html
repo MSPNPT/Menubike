@@ -16,6 +16,7 @@
             align-items: flex-start;
             flex-direction: column;
             height: 100vh;
+            position: relative; /* Posición relativa para el posicionamiento absoluto de las imágenes */
         }
         header {
             width: 80%;
@@ -30,9 +31,8 @@
             border-radius: 8px;
             display: flex;
             justify-content: center; /* Centra horizontalmente */
-            width: 100%;
-            position: absolute;
-            top: 0;
+            position: relative;
+            z-index: 1; /* Asegura que el menú esté por encima de las imágenes */
         }
         nav .dropdown {
             position: relative;
@@ -76,18 +76,19 @@
             width: 10%;
             height: auto;
             position: absolute;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0; /* Asegura que las imágenes estén detrás del menú */
+        }
+        .side-image.left {
             left: 0;
         }
         .side-image.right {
-            left: auto;
             right: 0;
         }
     </style>
 </head>
 <body>
-    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
-    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
     <header>
         <nav>
             <div class="dropdown">
@@ -120,5 +121,8 @@
             </div>
         </nav>
     </header>
+    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image left">
+    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
 </body>
 </html>
+
