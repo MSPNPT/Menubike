@@ -6,98 +6,119 @@
     <title>Tienda de Bicicletas</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Define la fuente del texto */
-            margin: 0; /* Elimina el margen exterior del cuerpo */
-            padding: 0; /* Elimina el relleno interior del cuerpo */
-            background: url('ruta/a/tu/imagen.jpg') no-repeat center center fixed; /* Establece la imagen de fondo */
-            background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir todo el área */
-            display: flex; /* Usa el modelo de caja flexible */
-            justify-content: center; /* Centra horizontalmente los elementos hijos */
-            align-items: flex-start; /* Alinea los elementos hijos en la parte superior del contenedor */
-            flex-direction: column; /* Establece la dirección de los elementos hijos en columnas */
-            height: 100vh; /* Establece la altura del cuerpo al 100% del viewport */
-            position: relative; /* Posición relativa para el posicionamiento absoluto de las imágenes */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('paisaje.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 100vh;
         }
         header {
-            width: 80%; /* Establece el ancho del encabezado al 80% del contenedor principal */
-            display: flex; /* Usa el modelo de caja flexible */
-            justify-content: center; /* Centra horizontalmente los elementos hijos */
-            align-items: center; /* Centra verticalmente los elementos hijos */
-            position: relative; /* Establece la posición relativa para los elementos hijos posicionados absolutamente */
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
         nav {
-            background-color: white; /* Fondo blanco para el menú */
-            padding: 10px; /* Relleno interior para el menú */
-            border-radius: 8px; /* Esquinas redondeadas para el menú */
-            display: flex; /* Usa el modelo de caja flexible */
-            justify-content: center; /* Centra horizontalmente los elementos hijos */
-            align-self: flex-start; /* Posiciona el menú en la parte superior del encabezado */
-            position: relative; /* Establece la posición relativa para los elementos hijos posicionados absolutamente */
-            z-index: 1; /* Asegura que el menú esté por encima de las imágenes */
+            background-color: white; /* Fondo blanco */
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            width: 100%;
+            position: absolute;
+            top: 0;
         }
         nav .dropdown {
-            position: relative; /* Posición relativa para los elementos desplegables */
-            margin: 0 10px; /* Margen para los elementos desplegables */
+            position: relative;
+            margin: 0 10px;
         }
         nav a {
-            color: black; /* Color del texto del enlace */
-            text-decoration: none; /* Sin decoración para el enlace */
-            padding: 14px 20px; /* Relleno para el enlace */
-            border-radius: 4px; /* Esquinas redondeadas para el enlace */
-            background-color: white; /* Fondo blanco para el enlace */
-            position: relative; /* Posición relativa para los elementos en línea */
+            color: black;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 4px;
+            background-color: white;
+            position: relative;
         }
         nav a:hover {
-            background-color: blue; /* Color de fondo al pasar el ratón */
-            color: white; /* Color del texto al pasar el ratón */
+            background-color: blue;
+            color: white;
         }
         nav .dropdown-content {
-            display: none; /* Oculta el contenido desplegable por defecto */
-            position: absolute; /* Posición absoluta para el contenido desplegable */
-            background-color: white; /* Fondo blanco para el contenido desplegable */
-            min-width: 160px; /* Ancho mínimo para el contenido desplegable */
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para el contenido desplegable */
-            z-index: 1; /* Asegura que el contenido desplegable esté por encima de otros elementos */
-            top: calc(100% + 10px); /* Posiciona el contenido debajo del enlace principal */
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: calc(100% + 10px); /* Posiciona el desplegable debajo del enlace principal */
         }
         nav .dropdown-content a {
-            color: black; /* Color del texto del enlace del contenido desplegable */
-            padding: 12px 16px; /* Relleno para el enlace del contenido desplegable */
-            text-decoration: none; /* Sin decoración para el enlace del contenido desplegable */
-            display: block; /* Bloquea el enlace del contenido desplegable */
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
         }
         nav .dropdown-content a:hover {
-            background-color: blue; /* Color de fondo al pasar el ratón en el contenido desplegable */
-            color: white; /* Color del texto al pasar el ratón en el contenido desplegable */
+            background-color: blue;
+            color: white;
         }
         nav .dropdown:hover .dropdown-content {
-            display: block; /* Muestra el contenido desplegable al pasar el ratón sobre el enlace principal */
+            display: block;
         }
         .side-image {
-            width: 10%; /* Ancho de las imágenes laterales */
-            height: auto; /* Altura automática para mantener la relación de aspecto */
-            position: absolute; /* Posición absoluta para las imágenes */
-            top: 50%; /* Coloca las imágenes verticalmente en el centro */
-            transform: translateY(-50%); /* Ajusta la posición vertical */
-            z-index: 0; /* Profundidad para que estén detrás del menú */
-        }
-        .side-image.left {
-            left: 0; /* Coloca la imagen izquierda en el borde izquierdo */
+            width: 10%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         .side-image.right {
-            right: 0; /* Coloca la imagen derecha en el borde derecho */
+            left: auto;
+            right: 0;
         }
     </style>
 </head>
 <body>
+    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image">
+    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
     <header>
         <nav>
-            <!-- Menú de navegación con elementos desplegables -->
+            <div class="dropdown">
+                <a href="#bicicletas">Bicicletas</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-bicicletas.html">Opción 1</a>
+                    <a href="enlace2-bicicletas.html">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#accesorios">Accesorios</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-accesorios.html">Opción 1</a>
+                    <a href="enlace2-accesorios.html">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#componentes">Componentes</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-componentes.html">Opción 1</a>
+                    <a href="enlace2-componentes.html">Opción 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#promociones">Promociones</a>
+                <div class="dropdown-content">
+                    <a href="enlace1-promociones.html">Opción 1</a>
+                    <a href="enlace2-promociones.html">Opción 2</a>
+                </div>
+            </div>
         </nav>
     </header>
-    <!-- Imágenes laterales para decoración -->
-    <img src="ruta/a/tu/imagen1.jpg" alt="Imagen Izquierda" class="side-image left">
-    <img src="ruta/a/tu/imagen2.jpg" alt="Imagen Derecha" class="side-image right">
 </body>
 </html>
-
