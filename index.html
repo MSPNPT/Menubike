@@ -1,132 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Bicicletas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif; /* Establece la fuente de todo el cuerpo de la página */
-            margin: 0; /* Elimina el margen predeterminado del cuerpo */
-            padding: 0; /* Elimina el relleno predeterminado del cuerpo */
-            background: url('paisaje.jpg') no-repeat center center fixed; /* Establece una imagen de fondo, centrada y fija */
-            background-size: cover; /* Escala la imagen de fondo para cubrir toda el área del cuerpo */
-            display: flex; /* Utiliza el modelo de caja flexible para el cuerpo */
-            justify-content: center; /* Centra los elementos hijos horizontalmente */
-            align-items: flex-start; /* Alinea los elementos hijos en la parte superior del contenedor */
-            flex-direction: column; /* Organiza los elementos hijos en una columna */
-            height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana gráfica */
-        }
-        header {
-            width: 85%; /* Establece el ancho del encabezado al 95% del cuerpo */
-            display: flex; /* Utiliza el modelo de caja flexible */
-            align-items: space-between; /* Centra los elementos hijos verticalmente */
-            padding-top: 0px /* Ajusta el espacio superior si es necesario */
-        }
-        nav {
-            background-color: white; /* Establece un fondo blanco para el menú de navegación */
-            padding: 20px; /* Añade un relleno de 10 píxeles alrededor del contenido del menú */
-            border-radius: 8px; /* Redondea las esquinas del menú */
-            display: flex; /* Utiliza el modelo de caja flexible */
-            justify-content: center; /* Centra los elementos hijos horizontalmente */
-            width: 100%; /* Establece el ancho del menú al 100% del contenedor */
-            position: absolute; /* Posiciona el menú de manera absoluta dentro del encabezado */
-            top: 5; /* Fija el menú en la parte superior del encabezado */
-        }
-        nav .dropdown {
-            position: relative; /* Establece una posición relativa para los elementos desplegables */
-            margin: 0 10px; /* Añade un margen de 10 píxeles a la izquierda y derecha de los elementos desplegables */
-        }
-        nav a {
-            color: black; /* Establece el color del texto de los enlaces en negro */
-            text-decoration: none; /* Elimina el subrayado de los enlaces */
-            padding: 14px 20px; /* Añade un relleno de 14 píxeles verticalmente y 20 píxeles horizontalmente */
-            border-radius: 4px; /* Redondea las esquinas de los enlaces */
-            background-color: white; /* Establece un fondo blanco para los enlaces */
-            position: relative; /* Establece una posición relativa para los enlaces */
-        }
-        nav a:hover {
-            background-color: blue; /* Cambia el color de fondo a azul al pasar el ratón sobre el enlace */
-            color: white; /* Cambia el color del texto a blanco al pasar el ratón sobre el enlace */
-        }
-        nav .dropdown-content {
-            display: none; /* Oculta el contenido desplegable por defecto */
-            position: absolute; /* Posiciona el contenido desplegable de manera absoluta */
-            background-color: white; /* Establece un fondo blanco para el contenido desplegable */
-            min-width: 160px; /* Establece un ancho mínimo de 160 píxeles para el contenido desplegable */
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra al contenido desplegable */
-            z-index: 1; /* Asegura que el contenido desplegable se superponga a otros elementos */
-            top: calc(100% + 10px); /* Posiciona el contenido debajo del enlace principal */
-        }
-        nav .dropdown-content a {
-            color: black; /* Establece el color del texto de los enlaces desplegables en negro */
-            padding: 12px 16px; /* Añade un relleno de 12 píxeles verticalmente y 16 píxeles horizontalmente */
-            text-decoration: none; /* Elimina el subrayado de los enlaces desplegables */
-            display: block; /* Convierte los enlaces desplegables en elementos de bloque */
-        }
-        nav .dropdown-content a:hover {
-            background-color: blue; /* Cambia el color de fondo a azul al pasar el ratón sobre el enlace desplegable */
-            color: white; /* Cambia el color del texto a blanco al pasar el ratón sobre el enlace desplegable */
-        }
-        nav .dropdown:hover .dropdown-content {
-            display: block; /* Muestra el contenido desplegable al pasar el ratón sobre el enlace principal */
-        }
-        .side-image {
-            width: 10%; /* Establece el ancho de las imágenes laterales al 10% del contenedor */
-            height: auto; /* Mantiene la proporción de la imagen */
-            position: absolute; /* Posiciona las imágenes de manera absoluta */
-            top: 0; /* Fija la posición de las imágenes en la parte superior del contenedor */
-            left: 0; /* Fija la posición de la imagen izquierda en el borde izquierdo */
-        }
-        .side-image.right {
-            left: auto; /* Elimina la posición izquierda */
-            right: 0; /* Fija la posición de la imagen derecha en el borde derecho */
-        }
-         /* Estilo opcional para ajustar la posición de la imagen */
-        .floating-image {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de bicicletas</title>
+  <style>
+    /* ====== ESTILOS GENERALES ====== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('paisaje.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    /* ====== HEADER Y NAVEGACIÓN ====== */
+    header {
+      width: 100%;
+      position: fixed;     /* Barra fija arriba */
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95); /* Blanco semitransparente */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 15px 20px;
+      gap: 20px;
+    }
+
+    nav .dropdown {
+      position: relative;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      background: white;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: blue;
+      color: white;
+    }
+
+    /* ====== MENÚ DESPLEGABLE ====== */
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      top: 100%; /* justo debajo del enlace */
+      left: 0;
+    }
+
+    nav .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      background: white;
+      color: black;
+    }
+
+    nav .dropdown-content a:hover {
+      background: blue;
+      color: white;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ====== IMÁGENES LATERALES ====== */
+    .side-image {
+      width: 10%;
+      height: auto;
+      position: fixed;
+      top: 80px; /* para que no tape el header */
+      left: 0;
+    }
+
+    .side-image.right {
+      right: 0;
+      left: auto;
+    }
+
+    /* ====== BOTÓN FLOTANTE WHATSAPP ====== */
+    .floating-image {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+        .floating-image2 {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    /* ====== AJUSTES RESPONSIVOS ====== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .side-image {
+        display: none; /* ocultar imágenes laterales en móvil */
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <nav>
+  <header>
+    <nav>
+      <div class="dropdown">
+        <a href="#ventas">Ventas</a>
+        <div class="dropdown-content">
+          <a href="https://mspnpt.github.io/CATALOGOBIKE/">Catálogo</a>
+          <a href="https://mspnpt.github.io/serviciosbike/">taller de bicicletas</a>
+          <a href="https://mspnpt.github.io/FIXBIKE/">Nosotros</a>
+          <a href="https://maps.app.goo.gl/yw6Cy1mTCH24QXmy6">Ubicanos</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#promociones">Promociones</a>
+        <div class="dropdown-content">
+          <a href="enlace1-promociones.html">Repuestos</a>
+          <a href="enlace1-promociones.html">Liquidacion de repuestos</a>
+          <a href="enlace2-promociones.html">Servicios en promocion</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#facturacion">Facturación</a>
+        <div class="dropdown-content">
+          <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">Consulta validez de factura</a>
+          <a href="enlace2-facturacion.html">Reclamos</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#reclamaciones">Alquiler de bicicletas</a>
+        <div class="dropdown-content">
+          <a href="enlace1-reclamos.html">Montañera</a>
+          <a href="enlace1-reclamos.html">Bici cross</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#reclamaciones">Reclamos</a>
+        <div class="dropdown-content">
+          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEFC7kpUM1lMQjBQMENHOVZaTkE3SklQR1NVRFpENC4u">Formulario</a>
+        </div>
+      </div>
             <div class="dropdown">
-                <a href="#accesorios">Ventas</a>
-                <div class="dropdown-content">
-                    <a href="https://mspnpt.github.io/CATALOGOBIKE/">Catalago</a>
-                    <a href="https://mspnpt.github.io/serviciosbike/#">servicios</a>
-                    <a href="https://mspnpt.github.io/FIXBIKE/">Nosotros</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#promociones">Promociones</a>
-                <div class="dropdown-content">
-                    <a href="enlace1-promociones.html">Cupones de descuento</a>
-                    <a href="enlace2-promociones.html">Registro</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#promociones">Facturación</a>
-                <div class="dropdown-content">
-                    <a href="enlace1-promociones.html">Facturas</a>
-                    <a href="enlace2-promociones.html">Boletas</a>
-                    </div>
-            </div>
-            <div class="dropdown">
-                <a href="#promociones">Libro de reclamaciones</a>
-            <div class="dropdown-content">
-                    <a href="enlace1-promociones.html">formulario</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-        <img src="logo1.jpg" alt="Imagen Izquierda" class="side-image">
-    <img src="logo1.jpg" alt="Imagen Derecha" class="side-image right">
-    <a href="https://wa.me/955374354" target="_blank" class="floating-image">
+        <a href="#reclamaciones">Cuidado de bicicleta</a>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/watch?v=L9e4AXJC9WM">Ajuste de frenos V Brake</a>
+          <a href="https://youtube.com/shorts/zYKbVb1JvS4?si=ssy-73nc90_vdn07">Ajuste de frenos de DISCO</a>
+          <a href="https://youtu.be/LRYKKxNaJAA?si=AeHIk94ulWFyGQeX">Limpieza basica</a>
+          <a href="https://youtube.com/shorts/QszmRcJr8-k?si=yfKHmSpxLejP124C">Aceite a la bicicleta</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Imágenes laterales -->
+  <img src="logo1.jpg" alt="Imagen Izquierda" class="side-image">
+  <img src="logo1.jpg" alt="Imagen Derecha" class="side-image right">
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/955374354" target="_blank" class="floating-image">
     <img src="WATSAP.gif" alt="Consulta por WhatsApp" width="280" height="99">
-</a>
+  </a>
+    <a href="https://www.facebook.com/people/FIX-SHOP-BIKE/100067212913335/" target="_blank" class="floating-image2">
+    <img src="facebook" alt="Consulta por Facebook" width="280" height="99">
+  </a>
+  <main style="margin-top:100px; text-align:center;">
+    <h1>
+      Taller de bicicletas FIX SHOP BIKE
+    </h1>
+    <p>Bienvenido a nuestro taller de bicicletas, especialistas en reparación y venta de bicicletas 🚲.</p>
+    <p>Tambien ofrecemos diferentes repuestos de bicicletas y alquiler de bicicletas🚲.</p>
+  </main>
+   <footer style="background:#fff; padding:20px; text-align:center; margin-top:40px;">
+    <h2 style="margin-bottom:20px;">Nuestros Proveedores</h2>
+    <a href="https://shimanoperu.com.pe/" target="_blank">
+      <img src="https://bike.shimano.com/content/dam/one-website/common/logo/shimano-logo.png" alt="Shimano" style="height:15px; margin:0 15px;">
+    </a>
+    <a href="https://www.sram.com/" target="_blank">
+      <img src="data:image/png;base64,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" alt="SRAM" style="height:15px; margin:0 15px;">
+    </a>
+    <a href="https://www.giant-bicycles.com/" target="_blank">
+      <img src="https://static.giant-bicycles.com/Images/Giant/Logos/Giant-Logo-2022.png" alt="Giant" style="height:20px; margin:0 15px;">
+    </a>
+    <a href="https://www.trekbikes.com/" target="_blank">
+      <img src="data:image/png;base64,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" alt="Trek" style="height:25px; margin:0 15px;">
+    </a>
+  </footer>
 </body>
 </html>
