@@ -58,7 +58,7 @@
       background: white;
       min-width: 160px;
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+      border-radius: 0px;
       overflow: hidden;
       top: 100%; /* justo debajo del enlace */
       left: 0;
@@ -97,25 +97,93 @@
     /* ====== BOTÓN FLOTANTE WHATSAPP ====== */
     .floating-image {
       position: fixed;
-      bottom: 20px;
+      bottom: 120px;
       right: 20px;
+      cursor:pointer;
+      z-index:9999;
     }
         .floating-image2 {
       position: fixed;
-      bottom: 20px;
+      bottom: 120px;
       left: 20px;
+      z-index:9999;
     }
 
     /* ====== AJUSTES RESPONSIVOS ====== */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      .side-image {
-        display: none; /* ocultar imágenes laterales en móvil */
-      }
-    }
+    @media (max-width: 6024px) {
+  body {
+    font-size: 14px; /* un poco más pequeño que en PC */
+  }
+  nav a {
+    padding: 8px 12px;
+    font-size: 27px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+    p1  {
+    font-size: 25px;
+  }
+  .side-image {
+    max-width: 120px;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px; /* un poco más pequeño que en PC */
+  }
+  nav a {
+    padding: 8px 12px;
+    font-size: 27px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+    p1  {
+    font-size: 25px;
+  }
+  .side-image {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* aún más pequeño */
+  }
+  nav a {
+    padding: 6px 10px;
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  p1  {
+    font-size: 20px;
+  }
+  .side-image {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 10px; /* versión súper compacta */
+  }
+  nav a {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p1  {
+    font-size: 20px;
+  }
+  .side-image {
+    display: none; /* opcional: ocultar imágenes para no saturar */
+  }
+}
   </style>
 </head>
 <body>
@@ -132,14 +200,6 @@
         </div>
       </div>
       <div class="dropdown">
-        <a href="#promociones">Promociones</a>
-        <div class="dropdown-content">
-          <a href="enlace1-promociones.html">Repuestos</a>
-          <a href="enlace1-promociones.html">Liquidacion de repuestos</a>
-          <a href="enlace2-promociones.html">Servicios en promocion</a>
-        </div>
-      </div>
-      <div class="dropdown">
         <a href="#facturacion">Facturación</a>
         <div class="dropdown-content">
           <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">Consulta validez de factura</a>
@@ -147,7 +207,7 @@
         </div>
       </div>
       <div class="dropdown">
-        <a href="#reclamaciones">Alquiler de bicicletas</a>
+        <a href="#reclamaciones">Alquiler</a>
         <div class="dropdown-content">
           <a href="enlace1-reclamos.html">Montañera</a>
           <a href="enlace1-reclamos.html">Bici cross</a>
@@ -160,7 +220,7 @@
         </div>
       </div>
             <div class="dropdown">
-        <a href="#reclamaciones">Cuidado de bicicleta</a>
+        <a href="#reclamaciones">Cuidado</a>
         <div class="dropdown-content">
           <a href="https://www.youtube.com/watch?v=L9e4AXJC9WM">Ajuste de frenos V Brake</a>
           <a href="https://youtube.com/shorts/zYKbVb1JvS4?si=ssy-73nc90_vdn07">Ajuste de frenos de DISCO</a>
@@ -186,27 +246,33 @@
     <h1>
       FIX SHOP BIKE
     </h1>
+        <p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p>
     <h1>
-      Taller de bicicletas
+      
     </h1>
     <h1>
-      Tienda de bicicletas
+      Tienda de bicicletas y taller de bicicletas
     </h1>
-    <p>Bienvenido a nuestro taller de bicicletas, especialistas en reparación y venta de bicicletas 🚲.</p>
-    <p>Tambien ofrecemos diferentes repuestos de bicicletas y alquiler de bicicletas🚲.</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
-    <p>🚲</p>
+        <p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p>
+    <p1>Bienvenido a nuestro taller de bicicletas, especialistas en reparación y venta de bicicletas, tambien ofrecemos diferentes repuestos de bicicletas y alquiler de bicicletas
+    <p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p>
+    <p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p><p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p><p style="color: transparent;">
+  Este texto está pero no se ve (100% transparente).
+</p>
   </main>
-   <footer style="background:#fff; padding:20px; text-align:center; margin-top:40px;">
+   <footer style="background:#fff; padding:20px; text-align:center;
+               position:fixed; bottom:0; left:0; width:100%;
+               box-shadow:0 -2px 5px rgba(0,0,0,0.1); z-index:1;">
     <h2 style="margin-bottom:20px;">Nuestros Proveedores</h2>
     <a href="https://shimanoperu.com.pe/" target="_blank">
       <img src="https://bike.shimano.com/content/dam/one-website/common/logo/shimano-logo.png" alt="Shimano" style="height:15px; margin:0 15px;">
